@@ -100,6 +100,7 @@ const Register = async () =>  {
     console.log('attestation Object: ', parsedAttesatationObject)
 
     document.getElementById('aaguid').value = aaguid
+    document.getElementById('aaguid-b64').value = Base64.encode(aaguid)
     document.getElementById('aaguid-chr').value = aaguid.reduce((res, x) => res += String.fromCharCode(x), "")
 }
 
