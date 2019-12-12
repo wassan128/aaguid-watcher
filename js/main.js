@@ -99,9 +99,21 @@ const Register = async () =>  {
     }
     console.log('attestation Object: ', parsedAttesatationObject)
 
+    const aaguid_base64 = JSON.stringify(Base64.encode(aaguid))
+    const aaguid_ascii = aaguid.reduce((res, x) => res += String.fromCharCode(x), "")
     document.getElementById('aaguid').value = aaguid
-    document.getElementById('aaguid-b64').value = Base64.encode(aaguid)
-    document.getElementById('aaguid-chr').value = aaguid.reduce((res, x) => res += String.fromCharCode(x), "")
+    document.getElementById('aaguid-b64').value = aaguid_base64
+    document.getElementById('aaguid-chr').value = aaguid_ascii
+
+    const tr = document.createElement('tr')
+    const td1 = document.createElement('td')
+    const td2 = document.createElement('td')
+    td1.innerText = aaguid_base64
+    td2.innerText = aaguid_ascii
+
+    tr.appendChild(td1)
+    tr.appendChild(td2)
+    document.querySelector('table').appendChild(tr)
 }
 
 const sha256 = (target) => {

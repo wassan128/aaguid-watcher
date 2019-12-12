@@ -38,7 +38,7 @@ h4 {
     color: #333;
     padding: 1em 0;
 }
-form {
+main {
     width: 90%;
     margin: 0 auto;
 }
@@ -69,4 +69,20 @@ label {
     color: #aaa;
     display: block;
 }
-
+table {
+    width: 100%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+td {
+    padding: 0.5em 0.1em;
+}
+tr:first-child {
+    font-weight: bold;
+    background: #333;
+}
+tr:first-child > td {
+    color: #fff;
+}
+tr:nth-child(2n) {
+    background: #f0f0f0;
+}
