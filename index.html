@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
+    <title>aaguid watcher</title>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/lib/cbor.js"></script>
+    <script src="./js/lib/sha256.js"></script>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+    <form>
+        <div>
+            <p>
+                <label for="username">input username:</label>
+                <input id="username" name="username" placeholder="username"/>
+            </p>
+            <p>
+                <button type="button" id="btn-register">Send</button>
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="aaguid">aaguid:</label>
+                <input id="aaguid" name="aaguid" placeholder="aaguid"/>
+                <label for="aaguid">aaguid(charCodeAt):</label>
+                <input id="aaguid-chr" name="aaguid-chr" placeholder="aaguid-chr"/>
+            </p>
+        </div>
+    </form>
+</body>
+</html>
+
