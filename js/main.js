@@ -113,7 +113,10 @@ const Register = async () =>  {
 
     tr.appendChild(td1)
     tr.appendChild(td2)
-    document.querySelector('table').appendChild(tr)
+
+    const table = document.querySelector('table')
+    const tr_top = document.querySelector('tr:nth-child(2)')
+    table.insertBefore(tr, tr_top)
 }
 
 const sha256 = (target) => {
